@@ -1,30 +1,107 @@
 {
     "analysis": {
-        "beladyAnomaly": true,
+        "beladyAnomaly": false,
+        "beladyDescription": "No Belady's Anomaly detected in FIFO for this sequence.",
         "fifoFrames": [
             {
-                "faults": 12,
+                "faults": 5,
                 "frames": 1
             },
             {
-                "faults": 12,
+                "faults": 5,
                 "frames": 2
             },
             {
-                "faults": 9,
+                "faults": 5,
                 "frames": 3
             },
             {
-                "faults": 10,
+                "faults": 4,
                 "frames": 4
             },
             {
-                "faults": 5,
+                "faults": 4,
                 "frames": 5
             },
             {
-                "faults": 5,
+                "faults": 4,
                 "frames": 6
+            },
+            {
+                "faults": 4,
+                "frames": 7
+            },
+            {
+                "faults": 4,
+                "frames": 8
+            }
+        ],
+        "lruFrames": [
+            {
+                "faults": 5,
+                "frames": 1
+            },
+            {
+                "faults": 5,
+                "frames": 2
+            },
+            {
+                "faults": 5,
+                "frames": 3
+            },
+            {
+                "faults": 4,
+                "frames": 4
+            },
+            {
+                "faults": 4,
+                "frames": 5
+            },
+            {
+                "faults": 4,
+                "frames": 6
+            },
+            {
+                "faults": 4,
+                "frames": 7
+            },
+            {
+                "faults": 4,
+                "frames": 8
+            }
+        ],
+        "optimalFrames": [
+            {
+                "faults": 5,
+                "frames": 1
+            },
+            {
+                "faults": 4,
+                "frames": 2
+            },
+            {
+                "faults": 4,
+                "frames": 3
+            },
+            {
+                "faults": 4,
+                "frames": 4
+            },
+            {
+                "faults": 4,
+                "frames": 5
+            },
+            {
+                "faults": 4,
+                "frames": 6
+            },
+            {
+                "faults": 4,
+                "frames": 7
+            },
+            {
+                "faults": 4,
+                "frames": 8
             }
         ]
     },
@@ -35,23 +112,16 @@
             2,
             3,
             4,
-            1,
-            2,
-            5,
-            1,
-            2,
-            3,
-            4,
-            5
+            1
         ]
     },
     "results": [
         {
             "algorithm": "FIFO",
-            "faultRatio": 0.75,
-            "faults": 9,
-            "hitRatio": 0.25,
-            "hits": 3,
+            "faultRatio": 1.0,
+            "faults": 5,
+            "hitRatio": 0.0,
+            "hits": 0,
             "steps": [
                 {
                     "frames": [
@@ -61,6 +131,7 @@
                     ],
                     "hit": false,
                     "page": 1,
+                    "reason": "Empty slot found — loaded page 1",
                     "replaced": -1
                 },
                 {
@@ -71,6 +142,7 @@
                     ],
                     "hit": false,
                     "page": 2,
+                    "reason": "Empty slot found — loaded page 2",
                     "replaced": -1
                 },
                 {
@@ -81,6 +153,7 @@
                     ],
                     "hit": false,
                     "page": 3,
+                    "reason": "Empty slot found — loaded page 3",
                     "replaced": -1
                 },
                 {
@@ -91,6 +164,7 @@
                     ],
                     "hit": false,
                     "page": 4,
+                    "reason": "Page 1 was loaded first (oldest) — replaced by 4",
                     "replaced": 1
                 },
                 {
@@ -101,86 +175,17 @@
                     ],
                     "hit": false,
                     "page": 1,
+                    "reason": "Page 2 was loaded first (oldest) — replaced by 1",
                     "replaced": 2
-                },
-                {
-                    "frames": [
-                        4,
-                        1,
-                        2
-                    ],
-                    "hit": false,
-                    "page": 2,
-                    "replaced": 3
-                },
-                {
-                    "frames": [
-                        5,
-                        1,
-                        2
-                    ],
-                    "hit": false,
-                    "page": 5,
-                    "replaced": 4
-                },
-                {
-                    "frames": [
-                        5,
-                        1,
-                        2
-                    ],
-                    "hit": true,
-                    "page": 1,
-                    "replaced": -1
-                },
-                {
-                    "frames": [
-                        5,
-                        1,
-                        2
-                    ],
-                    "hit": true,
-                    "page": 2,
-                    "replaced": -1
-                },
-                {
-                    "frames": [
-                        5,
-                        3,
-                        2
-                    ],
-                    "hit": false,
-                    "page": 3,
-                    "replaced": 1
-                },
-                {
-                    "frames": [
-                        5,
-                        3,
-                        4
-                    ],
-                    "hit": false,
-                    "page": 4,
-                    "replaced": 2
-                },
-                {
-                    "frames": [
-                        5,
-                        3,
-                        4
-                    ],
-                    "hit": true,
-                    "page": 5,
-                    "replaced": -1
                 }
             ]
         },
         {
             "algorithm": "LRU",
-            "faultRatio": 0.8333333333333334,
-            "faults": 10,
-            "hitRatio": 0.16666666666666666,
-            "hits": 2,
+            "faultRatio": 1.0,
+            "faults": 5,
+            "hitRatio": 0.0,
+            "hits": 0,
             "steps": [
                 {
                     "frames": [
@@ -190,6 +195,7 @@
                     ],
                     "hit": false,
                     "page": 1,
+                    "reason": "Empty slot found — loaded page 1",
                     "replaced": -1
                 },
                 {
@@ -200,6 +206,7 @@
                     ],
                     "hit": false,
                     "page": 2,
+                    "reason": "Empty slot found — loaded page 2",
                     "replaced": -1
                 },
                 {
@@ -210,6 +217,7 @@
                     ],
                     "hit": false,
                     "page": 3,
+                    "reason": "Empty slot found — loaded page 3",
                     "replaced": -1
                 },
                 {
@@ -220,6 +228,7 @@
                     ],
                     "hit": false,
                     "page": 4,
+                    "reason": "Page 1 was least recently used (step 1) — replaced by 4",
                     "replaced": 1
                 },
                 {
@@ -230,86 +239,17 @@
                     ],
                     "hit": false,
                     "page": 1,
-                    "replaced": 2
-                },
-                {
-                    "frames": [
-                        4,
-                        1,
-                        2
-                    ],
-                    "hit": false,
-                    "page": 2,
-                    "replaced": 3
-                },
-                {
-                    "frames": [
-                        5,
-                        1,
-                        2
-                    ],
-                    "hit": false,
-                    "page": 5,
-                    "replaced": 4
-                },
-                {
-                    "frames": [
-                        5,
-                        1,
-                        2
-                    ],
-                    "hit": true,
-                    "page": 1,
-                    "replaced": -1
-                },
-                {
-                    "frames": [
-                        5,
-                        1,
-                        2
-                    ],
-                    "hit": true,
-                    "page": 2,
-                    "replaced": -1
-                },
-                {
-                    "frames": [
-                        3,
-                        1,
-                        2
-                    ],
-                    "hit": false,
-                    "page": 3,
-                    "replaced": 5
-                },
-                {
-                    "frames": [
-                        3,
-                        4,
-                        2
-                    ],
-                    "hit": false,
-                    "page": 4,
-                    "replaced": 1
-                },
-                {
-                    "frames": [
-                        3,
-                        4,
-                        5
-                    ],
-                    "hit": false,
-                    "page": 5,
+                    "reason": "Page 2 was least recently used (step 2) — replaced by 1",
                     "replaced": 2
                 }
             ]
         },
         {
             "algorithm": "Optimal",
-            "faultRatio": 0.5833333333333334,
-            "faults": 7,
-            "hitRatio": 0.4166666666666667,
-            "hits": 5,
+            "faultRatio": 0.8,
+            "faults": 4,
+            "hitRatio": 0.2,
+            "hits": 1,
             "steps": [
                 {
                     "frames": [
@@ -319,6 +259,7 @@
                     ],
                     "hit": false,
                     "page": 1,
+                    "reason": "Empty slot found — loaded page 1",
                     "replaced": -1
                 },
                 {
@@ -329,6 +270,7 @@
                     ],
                     "hit": false,
                     "page": 2,
+                    "reason": "Empty slot found — loaded page 2",
                     "replaced": -1
                 },
                 {
@@ -339,97 +281,94 @@
                     ],
                     "hit": false,
                     "page": 3,
+                    "reason": "Empty slot found — loaded page 3",
                     "replaced": -1
                 },
                 {
                     "frames": [
                         1,
-                        2,
-                        4
+                        4,
+                        3
                     ],
                     "hit": false,
                     "page": 4,
-                    "replaced": 3
+                    "reason": "Page 2 is never used again (farthest future use) — replaced by 4",
+                    "replaced": 2
                 },
                 {
                     "frames": [
                         1,
-                        2,
-                        4
+                        4,
+                        3
                     ],
                     "hit": true,
                     "page": 1,
+                    "reason": "Page 1 is already in memory (HIT)",
                     "replaced": -1
-                },
+                }
+            ]
+        },
+        {
+            "algorithm": "LFU",
+            "faultRatio": 1.0,
+            "faults": 5,
+            "hitRatio": 0.0,
+            "hits": 0,
+            "steps": [
                 {
                     "frames": [
                         1,
-                        2,
-                        4
-                    ],
-                    "hit": true,
-                    "page": 2,
-                    "replaced": -1
-                },
-                {
-                    "frames": [
-                        1,
-                        2,
-                        5
+                        -1,
+                        -1
                     ],
                     "hit": false,
-                    "page": 5,
-                    "replaced": 4
-                },
-                {
-                    "frames": [
-                        1,
-                        2,
-                        5
-                    ],
-                    "hit": true,
                     "page": 1,
+                    "reason": "Empty slot found — loaded page 1 (freq=1)",
                     "replaced": -1
                 },
                 {
                     "frames": [
                         1,
                         2,
-                        5
+                        -1
                     ],
-                    "hit": true,
+                    "hit": false,
                     "page": 2,
+                    "reason": "Empty slot found — loaded page 2 (freq=1)",
                     "replaced": -1
                 },
                 {
                     "frames": [
-                        3,
+                        1,
                         2,
-                        5
+                        3
                     ],
                     "hit": false,
                     "page": 3,
+                    "reason": "Empty slot found — loaded page 3 (freq=1)",
+                    "replaced": -1
+                },
+                {
+                    "frames": [
+                        4,
+                        2,
+                        3
+                    ],
+                    "hit": false,
+                    "page": 4,
+                    "reason": "Page 1 had lowest frequency (1) — replaced by 4",
                     "replaced": 1
                 },
                 {
                     "frames": [
                         4,
-                        2,
-                        5
+                        1,
+                        3
                     ],
                     "hit": false,
-                    "page": 4,
-                    "replaced": 3
-                },
-                {
-                    "frames": [
-                        4,
-                        2,
-                        5
-                    ],
-                    "hit": true,
-                    "page": 5,
-                    "replaced": -1
+                    "page": 1,
+                    "reason": "Page 2 had lowest frequency (1) — replaced by 1",
+                    "replaced": 2
                 }
             ]
         }
